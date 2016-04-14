@@ -13,4 +13,8 @@ public class Coloring {
     private static final Object mInitializerLock;
     private static Coloring mInstance;
 
+    static {
+        mInitializerLock = new Object();
+    }
+
 }
