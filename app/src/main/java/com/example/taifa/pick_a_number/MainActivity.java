@@ -1,5 +1,6 @@
 package com.example.taifa.pick_a_number;
 
+import android.os.StrictMode;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.ViewGroup;
@@ -26,4 +27,23 @@ public class MainActivity extends AppCompatActivity implements OnValueChangeList
         super.onDestroy();
         disableStrictMode();
     }
+
+    private void enableStrictMode() {
+        // @formatter:off
+        StrictMode.setThreadPolicy(
+                new StrictMode.ThreadPolicy.
+                        Builder().
+                        detectAll().
+                        penaltyLog().
+                        build());
+        StrictMode.setVmPolicy(
+                new StrictMode.VmPolicy.
+                        Builder().
+                        detectAll().
+                        penaltyLog().
+                        penaltyDeath().
+                        build());
+        // @formatter:on
+    }
+
 }
