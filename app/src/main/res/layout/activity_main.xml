@@ -150,4 +150,23 @@
         app:show_text="true"
         app:text_color="@android:color/darker_gray"
         app:text_size="16sp" />
-    
+
+    <com.example.taifa.pick_a_number.view.ActualNumberPicker
+        android:id="@+id/actual_picker7"
+        android:layout_width="wrap_content"
+        android:layout_height="80dp"
+        android:layout_below="@id/actual_picker6"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:background="#FFFFFF30"
+        app:bar_color="@android:color/black"
+        app:bar_width="2dp"
+        app:bars_count="10"
+        app:max_value="100"
+        app:min_value="0"
+        app:show_controls="false"
+        app:show_fast_controls="false"
+        app:show_text="false"
+        app:text_color="@android:color/white"
+        app:text_size="16sp" />
+
