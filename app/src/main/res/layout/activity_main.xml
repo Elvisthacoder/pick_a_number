@@ -41,3 +41,14 @@
         app:text_color="@android:color/white"
         app:text_size="16sp"
         app:value="50" />
+
+    <TextView
+        android:id="@+id/info_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/actual_picker"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="12dp"
+        android:layout_marginTop="12dp"
+        android:gravity="center"
+        android:text="@string/this_picker_will_work" />
