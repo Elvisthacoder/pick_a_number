@@ -46,4 +46,9 @@ public class MainActivity extends AppCompatActivity implements OnValueChangeList
         // @formatter:on
     }
 
+    private void disableStrictMode() {
+        StrictMode.setVmPolicy(StrictMode.VmPolicy.LAX);
+        StrictMode.setThreadPolicy(StrictMode.ThreadPolicy.LAX);
+    }
+
 }
