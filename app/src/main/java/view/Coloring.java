@@ -1,5 +1,8 @@
 package view;
 
+import android.graphics.Color;
+import android.util.Log;
+
 /**
  * Created by taifa on 4/14/16.
  */
@@ -60,6 +63,42 @@ public class Coloring {
      * @param colorString String value of the desired color
      * @return Integer value for the color, or gray if something goes wrong
      */
+
+
+    public int decodeColor(String colorString) {
+        if (colorString == null || colorString.trim().isEmpty())
+            return Color.BLACK;
+
+        if (colorString.startsWith("#"))
+            colorString = colorString.replace("#", "");
+
+        if (colorString.startsWith("0x"))
+            colorString = colorString.replace("0x", "");
+
+        if (colorString.startsWith("0X"))
+            colorString = colorString.replace("0X", "");
+
+        int alpha = -1, red = -1, green = -1, blue = -1;
+
+        try {
+            if (colorString.length() == 8) {
+                alpha = Integer.parseInt(colorString.substring(0, 2), 16);
+                red = Integer.parseInt(colorString.substring(2, 4), 16);
+                green = Integer.parseInt(colorString.substring(4, 6), 16);
+                blue = Integer.parseInt(colorString.substring(6, 8), 16);
+            } else if (colorString.length() == 6) {
+                alpha = 255;
+                red = Integer.parseInt(colorString.substring(0, 2), 16);
+                green = Integer.parseInt(colorString.substring(2, 4), 16);
+                blue = Integer.parseInt(colorString.substring(4, 6), 16);
+            }
+            return Color.argb(alpha, red, green, blue);
+        } catch (NumberFormatException e) {
+            Log.w(LOG_TAG, "Error parsing color ", e);
+            return Color.GRAY;
+        }
+    }
+
 
 
 
