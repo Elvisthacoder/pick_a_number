@@ -1,5 +1,6 @@
 package com.example.taifa.pick_a_number;
 
+import android.graphics.Color;
 import android.os.StrictMode;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -50,5 +51,10 @@ public class MainActivity extends AppCompatActivity implements OnValueChangeList
         StrictMode.setVmPolicy(StrictMode.VmPolicy.LAX);
         StrictMode.setThreadPolicy(StrictMode.ThreadPolicy.LAX);
     }
+
+    private void updateBackgroundColor(float percent) {
+        int[] colors = new int[] {
+                Color.WHITE, Color.GRAY, Color.DKGRAY
+        };
 
 }
