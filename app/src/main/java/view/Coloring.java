@@ -42,6 +42,25 @@ public class Coloring {
         return mInstance;
     }
 
+    /* **********  Factory methods go below this line  ********** */
+
+    /**
+     * Converts a String hex color value to an Integer color value.<br>
+     * <br>
+     * <b>Supported formats:</b><br>
+     * <ul>
+     * <li>#aaRRggBb</li>
+     * <li>0xaaRRggBb</li>
+     * <li>0XaaRRggBb</li>
+     * <li>#RRggBb</li>
+     * <li>0xRRggBb</li>
+     * <li>0XRRggBb</li>
+     * </ul>
+     *
+     * @param colorString String value of the desired color
+     * @return Integer value for the color, or gray if something goes wrong
+     */
+
 
 
 
