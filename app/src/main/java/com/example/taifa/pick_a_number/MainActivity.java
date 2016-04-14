@@ -20,4 +20,10 @@ public class MainActivity extends AppCompatActivity implements OnValueChangeList
         mTestPicker.setListener(this);
         enableStrictMode();
     }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        disableStrictMode();
+    }
 }
