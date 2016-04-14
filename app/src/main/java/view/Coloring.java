@@ -17,4 +17,17 @@ public class Coloring {
         mInitializerLock = new Object();
     }
 
+    /**
+     * Destroys everything related to coloring.<br>
+     */
+    public static synchronized void destroy() {
+        mInstance = null;
+    }
+
+    /**
+     * Returns the singleton factory object.
+     *
+     * @return The only available {@code Coloring}
+     */
+
 }
