@@ -169,8 +169,8 @@
         app:show_text="false"
         app:text_color="@android:color/white"
         app:text_size="16sp" />
-    
-    <me.angrybyte.numberpicker.view.ActualNumberPicker
+
+    <com.example.taifa.pick_a_number.view.ActualNumberPicker
         android:id="@+id/actual_picker8"
         android:layout_width="wrap_content"
         android:layout_height="80dp"
