@@ -56,5 +56,10 @@ public class MainActivity extends AppCompatActivity implements OnValueChangeList
         int[] colors = new int[] {
                 Color.WHITE, Color.GRAY, Color.DKGRAY
         };
+        int color = colors[((int) Math.floor(percent * (colors.length - 1)))];
+
+        mContentRoot.setBackgroundColor(color);
+        mContentRoot.getChildAt(0).setBackgroundColor(color);
+    }
 
 }
