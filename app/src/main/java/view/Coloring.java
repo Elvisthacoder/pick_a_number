@@ -30,4 +30,19 @@ public class Coloring {
      * @return The only available {@code Coloring}
      */
 
+
+    public static Coloring get() {
+        if (mInstance == null) {
+            synchronized (mInitializerLock) {
+                if (mInstance == null) {
+                    mInstance = new Coloring();
+                }
+            }
+        }
+        return mInstance;
+    }
+
+
+
+
 }
