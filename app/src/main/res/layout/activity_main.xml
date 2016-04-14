@@ -14,3 +14,30 @@
         android:paddingTop="@dimen/activity_vertical_margin"
         tools:context="com.example.taifa.pick_a_number.MainActivity">
     </RelativeLayout>
+
+    <com.example.taifa.pick_a_number.view.ActualNumberPicker
+        android:id="@+id/actual_picker"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:background="#FFFF3040"
+        app:bar_color="@android:color/white"
+        app:bar_width="1dp"
+        app:bars_count="26"
+        app:controls_color="@android:color/white"
+        app:draw_over_controls="true"
+        app:draw_over_text="false"
+        app:fast_controls_color="@android:color/darker_gray"
+        app:highlight_color="#FFFF3040"
+        app:max_value="100"
+        app:min_value="0"
+        app:selection_color="#A0FF3040"
+        app:show_bars="true"
+        app:show_controls="true"
+        app:show_fast_controls="true"
+        app:show_highlight="true"
+        app:show_text="false"
+        app:text_color="@android:color/white"
+        app:text_size="16sp"
+        app:value="50" />
