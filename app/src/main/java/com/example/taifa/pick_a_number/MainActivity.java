@@ -18,5 +18,6 @@ public class MainActivity extends AppCompatActivity implements OnValueChangeList
         mTestPicker = (ActualNumberPicker) findViewById(R.id.actual_picker2);
         mContentRoot = (ViewGroup) findViewById(android.R.id.content);
         mTestPicker.setListener(this);
+        enableStrictMode();
     }
 }
