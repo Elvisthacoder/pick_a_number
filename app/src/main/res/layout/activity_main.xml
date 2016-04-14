@@ -52,3 +52,22 @@
         android:layout_marginTop="12dp"
         android:gravity="center"
         android:text="@string/this_picker_will_work" />
+
+    <me.angrybyte.numberpicker.view.ActualNumberPicker
+        android:id="@+id/actual_picker2"
+        android:layout_width="100dp"
+        android:layout_height="48dp"
+        android:layout_below="@id/info_message"
+        android:layout_centerHorizontal="true"
+        android:background="#FF30FF40"
+        app:bar_color="@android:color/darker_gray"
+        app:bar_width="1dp"
+        app:bars_count="26"
+        app:controls_color="#FFFFFF40"
+        app:max_value="100"
+        app:min_value="0"
+        app:selection_color="#B0FF0000"
+        app:show_highlight="false"
+        app:show_text="true"
+        app:text_color="@android:color/darker_gray"
+        app:text_size="16sp" />
