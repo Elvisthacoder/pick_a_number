@@ -53,7 +53,7 @@ public class MainActivity extends AppCompatActivity implements OnValueChangeList
     }
 
     private void updateBackgroundColor(float percent) {
-        int[] colors = new int[] {
+        int[] colors = new int[]{
                 Color.WHITE, Color.GRAY, Color.DKGRAY
         };
         int color = colors[((int) Math.floor(percent * (colors.length - 1)))];
@@ -67,5 +67,6 @@ public class MainActivity extends AppCompatActivity implements OnValueChangeList
         float percent = (float) newValue / (float) (mTestPicker.getMaxValue() - mTestPicker.getMinValue());
         updateBackgroundColor(percent);
     }
-
 }
+
+
