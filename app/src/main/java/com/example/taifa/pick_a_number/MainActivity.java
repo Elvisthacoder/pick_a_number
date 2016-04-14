@@ -62,4 +62,10 @@ public class MainActivity extends AppCompatActivity implements OnValueChangeList
         mContentRoot.getChildAt(0).setBackgroundColor(color);
     }
 
+    @Override
+    public void onValueChanged(int oldValue, int newValue) {
+        float percent = (float) newValue / (float) (mTestPicker.getMaxValue() - mTestPicker.getMinValue());
+        updateBackgroundColor(percent);
+    }
+
 }
