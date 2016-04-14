@@ -110,7 +110,7 @@
         app:text_color="@android:color/white"
         app:text_size="16sp" />
 
-    <me.angrybyte.numberpicker.view.ActualNumberPicker
+    <com.example.taifa.pick_a_number.view.ActualNumberPicker
         android:id="@+id/actual_picker5"
         android:layout_width="100dp"
         android:layout_height="48dp"
