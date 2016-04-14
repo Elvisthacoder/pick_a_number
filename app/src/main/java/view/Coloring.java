@@ -99,6 +99,15 @@ public class Coloring {
         }
     }
 
+    /**
+     * Blends given color with white background. This means that a full color<br>
+     * with transparency (alpha) will be lightened to make it look like it is<br>
+     * rendered over a white background. Resulting color will be non-transparent.
+     *
+     * @param color Color to use for blending
+     * @return Lightened color to match a white underlay render
+     */
+
 
 
 
