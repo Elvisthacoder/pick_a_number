@@ -2,9 +2,14 @@ package com.example.taifa.pick_a_number;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.ViewGroup;
 import android.widget.NumberPicker;
 
 public class MainActivity extends AppCompatActivity implements OnValueChangeListener {
+
+
+    private ActualNumberPicker mTestPicker;
+    private ViewGroup mContentRoot;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
