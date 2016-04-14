@@ -7,8 +7,8 @@ import android.os.Bundle;
 import android.view.ViewGroup;
 import android.widget.NumberPicker;
 
-import me.angrybyte.numberpicker.listener.OnValueChangeListener;
-import me.angrybyte.numberpicker.view.ActualNumberPicker;
+import com.example.taifa.pick_a_number.listener.OnValueChangeListener;
+import com.example.taifa.pick_a_number.view.ActualNumberPicker;
 
 public class MainActivity extends AppCompatActivity implements OnValueChangeListener {
 
