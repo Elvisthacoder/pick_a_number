@@ -7,6 +7,9 @@ import android.os.Bundle;
 import android.view.ViewGroup;
 import android.widget.NumberPicker;
 
+import me.angrybyte.numberpicker.listener.OnValueChangeListener;
+import me.angrybyte.numberpicker.view.ActualNumberPicker;
+
 public class MainActivity extends AppCompatActivity implements OnValueChangeListener {
 
 
