@@ -109,3 +109,24 @@
         app:show_text="true"
         app:text_color="@android:color/white"
         app:text_size="16sp" />
+
+    <me.angrybyte.numberpicker.view.ActualNumberPicker
+        android:id="@+id/actual_picker5"
+        android:layout_width="100dp"
+        android:layout_height="48dp"
+        android:layout_below="@id/actual_picker4"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:background="#FFFFFFFF"
+        app:bar_color="@android:color/darker_gray"
+        app:bar_width="12dp"
+        app:bars_count="4"
+        app:controls_color="#FF4050FF"
+        app:draw_over_controls="true"
+        app:fast_controls_color="#FF40FF60"
+        app:highlight_color="#FF30AA30"
+        app:max_value="100"
+        app:min_value="0"
+        app:show_text="false"
+        app:text_color="@android:color/darker_gray"
+        app:text_size="16sp" />
