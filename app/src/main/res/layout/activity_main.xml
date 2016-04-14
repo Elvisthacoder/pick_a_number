@@ -71,3 +71,21 @@
         app:show_text="true"
         app:text_color="@android:color/darker_gray"
         app:text_size="16sp" />
+
+    <me.angrybyte.numberpicker.view.ActualNumberPicker
+        android:id="@+id/actual_picker3"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_below="@id/actual_picker2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:background="#FF7080FF"
+        app:bar_color="@android:color/white"
+        app:bar_width="2dp"
+        app:bars_count="10"
+        app:draw_over_controls="false"
+        app:max_value="100"
+        app:min_value="0"
+        app:show_text="false"
+        app:text_color="@android:color/white"
+        app:text_size="16sp" />
