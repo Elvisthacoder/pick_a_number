@@ -500,6 +500,13 @@ public class Coloring {
         return createBackgroundDrawable(normal, clicked, checked, shouldFade, null);
     }
 
+    /**
+     * Very similar to {@link #createBackgroundDrawable(int, int, int, boolean)}, adding only one more parameter.
+     *
+     * @param bounds Clip/mask drawable to these rectangle bounds
+     * @return Clipped/masked drawable instance
+     */
+
 
 
 
