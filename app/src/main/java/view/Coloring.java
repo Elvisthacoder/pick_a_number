@@ -437,6 +437,23 @@ public class Coloring {
             states.addState(checkedState, checkedDrawable);
         }
 
+        // add fade effect if applicable
+        if (Build.VERSION.SDK_INT > Build.VERSION_CODES.GINGERBREAD_MR1) {
+            if (shouldFade) {
+                states.addState(new int[] {}, normalDrawable);
+                states.setEnterFadeDuration(0);
+                states.setExitFadeDuration(FADE_DURATION);
+            } else {
+                states.addState(activatedState, clickedDrawable);
+                states.addState(new int[] {}, normalDrawable);
+            }
+        } else {
+            states.addState(new int[] {}, normalDrawable);
+        }
+
+        return states;
+    }
+
 
 
 
