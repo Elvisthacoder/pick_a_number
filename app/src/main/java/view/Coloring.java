@@ -126,6 +126,9 @@ public class Coloring {
         if (b > 255)
             b = 255;
 
+        return Color.argb(255, r, g, b);
+    }
+
 
 
 
