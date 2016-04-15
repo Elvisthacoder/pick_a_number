@@ -129,6 +129,13 @@ public class Coloring {
         return Color.argb(255, r, g, b);
     }
 
+    /**
+     * Makes the given color a little bit darker.
+     *
+     * @param color Original color that needs to be darker
+     * @return Darkened original color
+     */
+
     public int darkenColor(int color) {
         int amount = 30;
 
