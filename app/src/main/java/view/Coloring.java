@@ -291,6 +291,16 @@ public class Coloring {
      * @return A colored drawable ready to use
      */
 
+    public Drawable colorDrawableWrap(Drawable drawable, int color) {
+        if (drawable != null) {
+            Drawable wrapped = DrawableCompat.wrap(drawable);
+            DrawableCompat.setTint(wrapped, color);
+            DrawableCompat.setTintMode(wrapped, PorterDuff.Mode.SRC_ATOP);
+            return DrawableCompat.unwrap(wrapped);
+        }
+        return null;
+    }
+
 
 
 
