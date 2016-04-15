@@ -496,6 +496,10 @@ public class Coloring {
      * @return A {@link StateListDrawable} drawable object ready for use
      */
 
+    public Drawable createBackgroundDrawable(int normal, int clicked, int checked, boolean shouldFade) {
+        return createBackgroundDrawable(normal, clicked, checked, shouldFade, null);
+    }
+
 
 
 
