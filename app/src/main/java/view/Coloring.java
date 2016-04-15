@@ -1,16 +1,19 @@
 package view;
 
 import android.content.Context;
+import android.content.res.ColorStateList;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
+import android.graphics.PorterDuff;
 import android.graphics.PorterDuffColorFilter;
 import android.graphics.Rect;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.GradientDrawable;
 import android.support.annotation.Nullable;
+import android.support.v4.graphics.drawable.DrawableCompat;
 import android.util.Log;
 
 import static android.graphics.PorterDuff.Mode.SRC_ATOP;
@@ -268,7 +271,18 @@ public class Coloring {
      * @param colorStates Which color set to use
      * @return A colored drawable ready to use
      */
-    
+
+    public Drawable colorDrawableWrap(Drawable drawable, ColorStateList colorStates) {
+        if (drawable != null) {
+            drawable = DrawableCompat.wrap(drawable);
+            DrawableCompat.setTintList(drawable, colorStates);
+            DrawableCompat.setTintMode(drawable, PorterDuff.Mode.SRC_ATOP);
+            drawable = DrawableCompat.unwrap(drawable);
+            return drawable;
+        }
+        return null;
+    }
+
 
 
 
