@@ -108,6 +108,13 @@ public class Coloring {
      * @return Lightened color to match a white underlay render
      */
 
+    public int alphaBlendWithWhite(int color) {
+        float alpha = Color.alpha(color) / 255f;
+        int origR = Color.red(color);
+        int origG = Color.green(color);
+        int origB = Color.blue(color);
+        int white = 255;
+
 
 
 
