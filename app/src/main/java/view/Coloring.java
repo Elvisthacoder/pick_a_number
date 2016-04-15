@@ -1,6 +1,9 @@
 package view;
 
 import android.graphics.Color;
+import android.graphics.Rect;
+import android.graphics.drawable.Drawable;
+import android.graphics.drawable.GradientDrawable;
 import android.util.Log;
 
 /**
@@ -210,6 +213,18 @@ public class Coloring {
      * @return Colored and clipped drawable object
      */
     @SuppressWarnings("UnusedDeclaration")
+
+    public Drawable createDrawable(int color, Rect bounds) {
+        // init normal state drawable
+        Drawable drawable = new GradientDrawable(GradientDrawable.Orientation.BOTTOM_TOP, new int[] {
+                color, color
+        }).mutate();
+        if (color == Color.TRANSPARENT) {
+            drawable.setAlpha(0);
+        }
+        drawable.setBounds(bounds);
+        return drawable;
+    }
 
 
 
