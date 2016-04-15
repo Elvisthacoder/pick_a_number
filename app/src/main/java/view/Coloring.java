@@ -547,6 +547,10 @@ public class Coloring {
             };
         }
 
+        // initialize identifiers
+        int[] stateColors;
+        int[][] stateIdentifiers;
+        int contrastColor = getContrastColor(clickedBackground);
 
 
 
@@ -556,4 +560,6 @@ public class Coloring {
 
 
 
-}
+
+
+    }
