@@ -13,6 +13,7 @@ import android.graphics.Rect;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.GradientDrawable;
+import android.graphics.drawable.StateListDrawable;
 import android.support.annotation.Nullable;
 import android.support.v4.graphics.drawable.DrawableCompat;
 import android.support.v4.graphics.drawable.DrawableWrapper;
@@ -349,6 +350,20 @@ public class Coloring {
         Bitmap original = BitmapFactory.decodeResource(context.getResources(), resourceId, opts);
         return colorDrawable(context, new BitmapDrawable(context.getResources(), original), color);
     }
+
+    /**
+     * Creates a new {@code StateListDrawable} drawable. States that should be provided are "normal",<br>
+     * "clicked" (pressed) and "checked" (selected). All states are actually integer colors.<br>
+     * Optionally, {@code shouldFade} can be set to false to avoid the fading effect.<br>
+     * <br>
+     * Note: <i>{@link Color#TRANSPARENT} can be used to supply a transparent state.</i>
+     *
+     * @param normal Color for the idle state
+     * @param clicked Color for the clicked/pressed state
+     * @param checked Color for the checked/selected state
+     * @param shouldFade Set to true to enable the fading effect, false otherwise
+     * @return A {@link StateListDrawable} drawable object ready for use
+     */
 
 
 
