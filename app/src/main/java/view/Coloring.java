@@ -1,6 +1,7 @@
 package view;
 
 import android.annotation.SuppressLint;
+import android.annotation.TargetApi;
 import android.content.Context;
 import android.content.res.ColorStateList;
 import android.graphics.Bitmap;
@@ -12,6 +13,7 @@ import android.graphics.PorterDuff;
 import android.graphics.PorterDuffColorFilter;
 import android.graphics.Rect;
 import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.GradientDrawable;
 import android.graphics.drawable.StateListDrawable;
@@ -462,6 +464,14 @@ public class Coloring {
      * @param bounds Clip/mask drawable to these rectangle bounds
      * @return A fully colored RippleDrawable instance
      */
+
+    @TargetApi(Build.VERSION_CODES.LOLLIPOP)
+    public Drawable createRippleDrawable(int normalColor, int rippleColor, Rect bounds) {
+        ColorDrawable maskDrawable = null;
+        if (bounds != null) {
+            maskDrawable = new ColorDrawable(Color.WHITE);
+            maskDrawable.setBounds(bounds);
+        }
 
 
 
