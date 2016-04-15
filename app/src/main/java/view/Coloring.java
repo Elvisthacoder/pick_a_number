@@ -172,6 +172,35 @@ public class Coloring {
      * @return Lightened original color
      */
 
+    public int lightenColor(int color) {
+        int amount = 60;
+
+        int r = Color.red(color);
+        int g = Color.green(color);
+        int b = Color.blue(color);
+        int a = Color.alpha(color);
+
+        if (r + amount <= 255) {
+            r += amount;
+        } else {
+            r = 255;
+        }
+
+        if (g + amount <= 255) {
+            g += amount;
+        } else {
+            g = 255;
+        }
+
+        if (b + amount <= 255) {
+            b += amount;
+        } else {
+            b = 255;
+        }
+
+        return Color.argb(a, r, g, b);
+    }
+
 
 
 }
