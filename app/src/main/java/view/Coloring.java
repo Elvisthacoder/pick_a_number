@@ -592,6 +592,12 @@ public class Coloring {
                 original = original.getCurrent();
             }
 
+            // overridden in previous if clause, so check again
+            if (original == null) {
+                return null;
+            }
+        }
+
 
 
 
