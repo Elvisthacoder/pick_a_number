@@ -396,6 +396,10 @@ public class Coloring {
         Drawable normalDrawable = new GradientDrawable(GradientDrawable.Orientation.BOTTOM_TOP, new int[] {
                 normal, normal
         }).mutate();
+        if (normal == Color.TRANSPARENT)
+            normalDrawable.setAlpha(0);
+        else
+            normalDrawable.setBounds(BOUNDS, BOUNDS, BOUNDS, BOUNDS);
 
 
 
