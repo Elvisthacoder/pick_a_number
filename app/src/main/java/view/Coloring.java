@@ -419,6 +419,15 @@ public class Coloring {
         else
             checkedDrawable.setBounds(BOUNDS, BOUNDS, BOUNDS, BOUNDS);
 
+        // init focused state drawable (use normal color)
+        Drawable focusedDrawable = new GradientDrawable(GradientDrawable.Orientation.BOTTOM_TOP, new int[] {
+                normal, normal
+        }).mutate();
+        if (normal == Color.TRANSPARENT)
+            focusedDrawable.setAlpha(0);
+        else
+            focusedDrawable.setBounds(BOUNDS, BOUNDS, BOUNDS, BOUNDS);
+
 
 
 
