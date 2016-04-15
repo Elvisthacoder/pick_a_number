@@ -515,6 +515,15 @@ public class Coloring {
         }
     }
 
+    /**
+     * Similar to {@link #createContrastStateDrawable(Context, int, int, boolean, android.graphics.drawable.Drawable)} but using colors
+     * only, no drawables.
+     *
+     * @param normal Color normal state to this color
+     * @param clickedBackground Background color of the View that will show when view is clicked
+     * @return The color state list that is in contrast with the on-click background color
+     */
+
 
 
 
