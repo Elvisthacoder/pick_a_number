@@ -165,7 +165,12 @@ public class Coloring {
         return Color.argb(a, r, g, b);
     }
 
-
+    /**
+     * Makes the given color a little bit lighter.
+     *
+     * @param color Original color that needs to be lighter
+     * @return Lightened original color
+     */
 
 
 
