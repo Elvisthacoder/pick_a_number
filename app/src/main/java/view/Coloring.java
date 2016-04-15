@@ -226,6 +226,15 @@ public class Coloring {
         return drawable;
     }
 
+    /**
+     * Colors the given drawable to a specified color. Uses mode SRC_ATOP.
+     *
+     * @param context Which context to use
+     * @param drawable Which drawable to color
+     * @param color Which color to use
+     * @return A colored drawable ready for use
+     */
+
 
 
 }
