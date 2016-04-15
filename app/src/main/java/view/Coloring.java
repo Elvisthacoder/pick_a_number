@@ -507,6 +507,14 @@ public class Coloring {
      * @return Clipped/masked drawable instance
      */
 
+    public Drawable createBackgroundDrawable(int normal, int clicked, int checked, boolean shouldFade, Rect bounds) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            return createRippleDrawable(normal, clicked, bounds);
+        } else {
+            return createStateDrawable(normal, clicked, checked, shouldFade);
+        }
+    }
+
 
 
 
