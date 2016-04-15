@@ -410,6 +410,15 @@ public class Coloring {
         else
             clickedDrawable.setBounds(BOUNDS, BOUNDS, BOUNDS, BOUNDS);
 
+        // init checked state drawable
+        Drawable checkedDrawable = new GradientDrawable(GradientDrawable.Orientation.BOTTOM_TOP, new int[] {
+                checked, checked
+        }).mutate();
+        if (checked == Color.TRANSPARENT)
+            checkedDrawable.setAlpha(0);
+        else
+            checkedDrawable.setBounds(BOUNDS, BOUNDS, BOUNDS, BOUNDS);
+
 
 
 
