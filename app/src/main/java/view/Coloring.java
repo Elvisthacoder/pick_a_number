@@ -115,6 +115,17 @@ public class Coloring {
         int origB = Color.blue(color);
         int white = 255;
 
+        // rule: outputRed = (foregroundRed * foregroundAlpha) + (backgroundRed * (1.0 - foregroundAlpha))
+        int r = (int) ((origR * alpha) + (white * (1.0 - alpha)));
+        if (r > 255)
+            r = 255;
+        int g = (int) ((origG * alpha) + (white * (1.0 - alpha)));
+        if (g > 255)
+            g = 255;
+        int b = (int) ((origB * alpha) + (white * (1.0 - alpha)));
+        if (b > 255)
+            b = 255;
+
 
 
 
