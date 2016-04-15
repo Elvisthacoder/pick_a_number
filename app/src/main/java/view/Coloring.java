@@ -14,6 +14,7 @@ import android.graphics.drawable.Drawable;
 import android.graphics.drawable.GradientDrawable;
 import android.support.annotation.Nullable;
 import android.support.v4.graphics.drawable.DrawableCompat;
+import android.support.v4.graphics.drawable.DrawableWrapper;
 import android.util.Log;
 
 import static android.graphics.PorterDuff.Mode.SRC_ATOP;
@@ -300,6 +301,30 @@ public class Coloring {
         }
         return null;
     }
+
+    public Drawable colorUnknownDrawable(@Nullable Drawable drawable, int color) {
+        if (drawable instanceof DrawableWrapper || drawable instanceof android.support.v7.graphics.drawable.DrawableWrapper) {
+            drawable = DrawableCompat.wrap(drawable);
+            DrawableCompat.setTint(drawable, color);
+            DrawableCompat.setTintMode(drawable, PorterDuff.Mode.SRC_ATOP);
+            drawable = DrawableCompat.unwrap(drawable);
+            return drawable;
+        } else {
+            try {
+                // noinspection ConstantConditions
+                Drawable copy = drawable.getConstantState().newDrawable();
+                copy.mutate();
+                copy.setColorFilter(color, SRC_ATOP);
+                return copy;
+            } catch (Exception e) {
+                if (drawable != null) {
+                    Log.d(LOG_TAG, "Failed to color unknown drawable: " + drawable.getClass().getSimpleName());
+                }
+                return drawable;
+            }
+        }
+    }
+
 
 
 
