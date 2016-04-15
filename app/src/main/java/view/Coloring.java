@@ -283,6 +283,14 @@ public class Coloring {
         return null;
     }
 
+    /**
+     * Colors the given drawable to a specified color using the drawable wrapping technique.
+     *
+     * @param drawable Which drawable to color
+     * @param color Which color to use
+     * @return A colored drawable ready to use
+     */
+
 
 
 
