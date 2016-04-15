@@ -571,6 +571,19 @@ public class Coloring {
         return new ColorStateList(stateIdentifiers, stateColors);
     }
 
+    /**
+     * Similar to {@link #createBackgroundDrawable(int, int, int, boolean)} but with additional {@code original} drawable parameter.
+     *
+     * @param context Which context to use
+     * @param normal Color normal state of the drawable to this color
+     * @param clickedBackground Background color of the View that will show when view is clicked
+     * @param shouldFade Set to true if the state list should have a fading effect
+     * @param original This drawable will be contrasted to the {@code clickedBackground} color on press
+     * @return The state list drawable that is in contrast with the on-click background color
+     */
+
+
+
 
 
 
