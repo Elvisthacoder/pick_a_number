@@ -585,6 +585,12 @@ public class Coloring {
     @SuppressLint({
             "InlinedApi", "NewApi"
     })
+    public Drawable createContrastStateDrawable(Context context, int normal, int clickedBackground, boolean shouldFade, Drawable original) {
+        if (original == null || original instanceof StateListDrawable) {
+            if (original != null) {
+                Log.i(LOG_TAG, "Original drawable is already a StateListDrawable");
+                original = original.getCurrent();
+            }
 
 
 
