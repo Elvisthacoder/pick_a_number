@@ -400,11 +400,15 @@ public class Coloring {
             normalDrawable.setAlpha(0);
         else
             normalDrawable.setBounds(BOUNDS, BOUNDS, BOUNDS, BOUNDS);
-        
+
         // init clicked state drawable
         Drawable clickedDrawable = new GradientDrawable(GradientDrawable.Orientation.BOTTOM_TOP, new int[] {
                 clicked, clicked
         }).mutate();
+        if (clicked == Color.TRANSPARENT)
+            clickedDrawable.setAlpha(0);
+        else
+            clickedDrawable.setBounds(BOUNDS, BOUNDS, BOUNDS, BOUNDS);
 
 
 
