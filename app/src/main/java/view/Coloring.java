@@ -15,6 +15,7 @@ import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.GradientDrawable;
 import android.graphics.drawable.StateListDrawable;
+import android.os.Build;
 import android.support.annotation.Nullable;
 import android.support.v4.graphics.drawable.DrawableCompat;
 import android.support.v4.graphics.drawable.DrawableWrapper;
@@ -369,6 +370,29 @@ public class Coloring {
     @SuppressLint({
             "InlinedApi", "NewApi"
     })
+
+    public Drawable createStateDrawable(int normal, int clicked, int checked, boolean shouldFade) {
+        // init state arrays
+        int[] selectedState = new int[] {
+                android.R.attr.state_selected
+        };
+        int[] pressedState = new int[] {
+                android.R.attr.state_pressed
+        };
+        int[] checkedState = new int[] {
+                android.R.attr.state_checked
+        };
+        int[] focusedState = new int[] {
+                android.R.attr.state_focused
+        };
+        int[] activatedState = new int[] {};
+        if (Build.VERSION.SDK_INT > Build.VERSION_CODES.GINGERBREAD_MR1) {
+            activatedState = new int[] {
+                    android.R.attr.state_activated
+            };
+        }
+
+
 
 
 
