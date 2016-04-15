@@ -325,6 +325,16 @@ public class Coloring {
         }
     }
 
+    /**
+     * Colors the given drawable to a specified color. Uses mode SRC_ATOP.<br>
+     * Automatically loads a good quality bitmap from the {@code resourceId} if it is valid.
+     *
+     * @param context Which context to use
+     * @param resourceId Which drawable resource to load
+     * @param color Which color to use
+     * @return A colored {@link Drawable} ready for use
+     */
+
 
 
 
