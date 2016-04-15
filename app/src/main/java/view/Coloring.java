@@ -392,6 +392,11 @@ public class Coloring {
             };
         }
 
+        // init normal state drawable
+        Drawable normalDrawable = new GradientDrawable(GradientDrawable.Orientation.BOTTOM_TOP, new int[] {
+                normal, normal
+        }).mutate();
+
 
 
 
