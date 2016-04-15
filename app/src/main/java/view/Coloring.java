@@ -524,6 +524,10 @@ public class Coloring {
      * @return The color state list that is in contrast with the on-click background color
      */
 
+    @SuppressLint({
+            "InlinedApi", "NewApi"
+    })
+
 
 
 
