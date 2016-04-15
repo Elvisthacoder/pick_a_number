@@ -454,6 +454,15 @@ public class Coloring {
         return states;
     }
 
+    /**
+     * Creates a new {@code RippleDrawable} used in Lollipop and later.
+     *
+     * @param normalColor Color for the idle ripple state
+     * @param rippleColor Color for the clicked, pressed and focused ripple states
+     * @param bounds Clip/mask drawable to these rectangle bounds
+     * @return A fully colored RippleDrawable instance
+     */
+
 
 
 
