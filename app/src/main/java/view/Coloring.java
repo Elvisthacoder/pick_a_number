@@ -481,6 +481,21 @@ public class Coloring {
         }
     }
 
+    /**
+     * Creates a new drawable using given parameters. States that should be provided are "normal",<br>
+     * "clicked" (pressed) and "checked" (selected). All states are actually integer colors.<br>
+     * Optionally, {@code shouldFade} can be set to false to avoid the fading effect.<br>
+     * Depending on API level, Drawable instance will be a Ripple drawable (Lollipop) or StateListDrawable.<br>
+     * <br>
+     * Note: <i>{@link Color#TRANSPARENT} can be used to supply a transparent state.</i>
+     *
+     * @param normal Color for the idle state
+     * @param clicked Color for the clicked/pressed state
+     * @param checked Color for the checked/selected state
+     * @param shouldFade Sets to true to enable the fading effect, false otherwise
+     * @return A {@link StateListDrawable} drawable object ready for use
+     */
+
 
 
 
