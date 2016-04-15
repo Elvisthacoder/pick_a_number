@@ -1,5 +1,6 @@
 package view;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.res.ColorStateList;
 import android.graphics.Bitmap;
@@ -364,6 +365,12 @@ public class Coloring {
      * @param shouldFade Set to true to enable the fading effect, false otherwise
      * @return A {@link StateListDrawable} drawable object ready for use
      */
+
+    @SuppressLint({
+            "InlinedApi", "NewApi"
+    })
+
+
 
 
 
