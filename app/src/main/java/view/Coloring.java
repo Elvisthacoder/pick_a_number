@@ -3,6 +3,7 @@ package view;
 import android.content.Context;
 import android.content.res.ColorStateList;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
@@ -334,6 +335,21 @@ public class Coloring {
      * @param color Which color to use
      * @return A colored {@link Drawable} ready for use
      */
+
+    public Drawable colorDrawable(Context context, int resourceId, int color) {
+        BitmapFactory.Options opts = new BitmapFactory.Options();
+        opts.inDither = false; // disable dithering
+        //noinspection deprecation
+        opts.inPurgeable = true; // allocate pixels that could be freed by the system
+        //noinspection deprecation
+        opts.inInputShareable = true; // see javadoc
+        opts.inTempStorage = new byte[32 * 1024]; // temp storage - advice is to use 16K
+        opts.inPreferQualityOverSpeed = false;
+
+        Bitmap original = BitmapFactory.decodeResource(context.getResources(), resourceId, opts);
+        return colorDrawable(context, new BitmapDrawable(context.getResources(), original), color);
+    }
+
 
 
 
