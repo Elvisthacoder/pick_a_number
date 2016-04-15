@@ -16,6 +16,7 @@ import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.GradientDrawable;
+import android.graphics.drawable.RippleDrawable;
 import android.graphics.drawable.StateListDrawable;
 import android.os.Build;
 import android.support.annotation.Nullable;
@@ -472,6 +473,13 @@ public class Coloring {
             maskDrawable = new ColorDrawable(Color.WHITE);
             maskDrawable.setBounds(bounds);
         }
+
+        if (normalColor == Color.TRANSPARENT) {
+            return new RippleDrawable(ColorStateList.valueOf(rippleColor), null, maskDrawable);
+        } else {
+            return new RippleDrawable(ColorStateList.valueOf(rippleColor), new ColorDrawable(normalColor), maskDrawable);
+        }
+    }
 
 
 
