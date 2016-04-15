@@ -129,6 +129,35 @@ public class Coloring {
         return Color.argb(255, r, g, b);
     }
 
+    public int darkenColor(int color) {
+        int amount = 30;
+
+        int r = Color.red(color);
+        int g = Color.green(color);
+        int b = Color.blue(color);
+        int a = Color.alpha(color);
+
+        if (r - amount >= 0) {
+            r -= amount;
+        } else {
+            r = 0;
+        }
+
+        if (g - amount >= 0) {
+            g -= amount;
+        } else {
+            g = 0;
+        }
+
+        if (b - amount >= 0) {
+            b -= amount;
+        } else {
+            b = 0;
+        }
+
+        return Color.argb(a, r, g, b);
+    }
+
 
 
 
