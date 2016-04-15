@@ -201,6 +201,16 @@ public class Coloring {
         return Color.argb(a, r, g, b);
     }
 
+    /**
+     * Creates a new drawable (implementation of the Drawable object may vary depending on OS version).<br>
+     * Drawable will be colored with given color, and clipped to match given boundaries.
+     *
+     * @param color Integer color used to color the output drawable
+     * @param bounds Four-dimensional vector bounds
+     * @return Colored and clipped drawable object
+     */
+    @SuppressWarnings("UnusedDeclaration")
+
 
 
 }
