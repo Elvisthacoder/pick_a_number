@@ -428,6 +428,15 @@ public class Coloring {
         else
             focusedDrawable.setBounds(BOUNDS, BOUNDS, BOUNDS, BOUNDS);
 
+        // prepare state list (order of adding states is important!)
+        StateListDrawable states = new StateListDrawable();
+        states.addState(pressedState, clickedDrawable);
+        if (!shouldFade) {
+            states.addState(selectedState, clickedDrawable);
+            states.addState(focusedState, focusedDrawable);
+            states.addState(checkedState, checkedDrawable);
+        }
+
 
 
 
