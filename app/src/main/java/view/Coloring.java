@@ -261,6 +261,15 @@ public class Coloring {
         return new BitmapDrawable(context.getResources(), copy);
     }
 
+    /**
+     * Colors the given drawable to a specified color set using the drawable wrapping technique.
+     *
+     * @param drawable Which drawable to color
+     * @param colorStates Which color set to use
+     * @return A colored drawable ready to use
+     */
+    
+
 
 
 }
