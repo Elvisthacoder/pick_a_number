@@ -528,6 +528,25 @@ public class Coloring {
             "InlinedApi", "NewApi"
     })
 
+    public ColorStateList createContrastStateColors(int normal, int clickedBackground) {
+        // init state arrays
+        int[] normalState = new int[] {};
+        int[] selectedState = new int[] {
+                android.R.attr.state_selected
+        };
+        int[] pressedState = new int[] {
+                android.R.attr.state_pressed
+        };
+        int[] checkedState = new int[] {
+                android.R.attr.state_checked
+        };
+        int[] activatedState = new int[] {};
+        if (Build.VERSION.SDK_INT > Build.VERSION_CODES.GINGERBREAD_MR1) {
+            activatedState = new int[] {
+                    android.R.attr.state_activated
+            };
+        }
+
 
 
 
