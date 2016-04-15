@@ -1,10 +1,19 @@
 package view;
 
+import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.Canvas;
 import android.graphics.Color;
+import android.graphics.Paint;
+import android.graphics.PorterDuffColorFilter;
 import android.graphics.Rect;
+import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.GradientDrawable;
+import android.support.annotation.Nullable;
 import android.util.Log;
+
+import static android.graphics.PorterDuff.Mode.SRC_ATOP;
 
 /**
  * Created by taifa on 4/14/16.
@@ -234,6 +243,23 @@ public class Coloring {
      * @param color Which color to use
      * @return A colored drawable ready for use
      */
+
+    public Drawable colorDrawable(Context context, @Nullable Drawable drawable, int color) {
+        if (!(drawable instanceof BitmapDrawable)) {
+            Log.w(LOG_TAG, "Original drawable is not a bitmap! Trying with constant state cloning.");
+            return colorUnknownDrawable(drawable, color);
+        }
+
+        Bitmap original = ((BitmapDrawable) drawable).getBitmap();
+        Bitmap copy = Bitmap.createBitmap(original.getWidth(), original.getHeight(), original.getConfig());
+
+        Paint paint = new Paint();
+        Canvas c = new Canvas(copy);
+        paint.setColorFilter(new PorterDuffColorFilter(color, SRC_ATOP));
+        c.drawBitmap(original, 0, 0, paint);
+
+        return new BitmapDrawable(context.getResources(), copy);
+    }
 
 
 
