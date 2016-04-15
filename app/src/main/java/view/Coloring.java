@@ -552,6 +552,25 @@ public class Coloring {
         int[][] stateIdentifiers;
         int contrastColor = getContrastColor(clickedBackground);
 
+        if (Build.VERSION.SDK_INT > Build.VERSION_CODES.GINGERBREAD_MR1) {
+            stateIdentifiers = new int[][] {
+                    selectedState, pressedState, checkedState, activatedState, normalState
+            };
+            stateColors = new int[] {
+                    contrastColor, contrastColor, contrastColor, contrastColor, normal
+            };
+        } else {
+            stateIdentifiers = new int[][] {
+                    selectedState, pressedState, checkedState, normalState
+            };
+            stateColors = new int[] {
+                    contrastColor, contrastColor, contrastColor, normal
+            };
+        }
+
+        return new ColorStateList(stateIdentifiers, stateColors);
+    }
+
 
 
 
