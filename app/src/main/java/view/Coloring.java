@@ -695,6 +695,11 @@ public class Coloring {
      * @return White or black, depending on the provided color's brightness
      */
 
+    public int getContrastColor(int color) {
+        int r = Color.red(color);
+        int g = Color.green(color);
+        int b = Color.blue(color);
+
 
 
 
