@@ -655,6 +655,14 @@ public class Coloring {
      */
 
     @TargetApi(Build.VERSION_CODES.LOLLIPOP)
+    public Drawable createContrastRippleDrawable(int normal, int clickedBackground, Drawable original) {
+        if (original == null) {
+            Log.i(LOG_TAG, "Creating a boundless drawable for contrast ripple request - original was null!");
+            return createRippleDrawable(normal, clickedBackground, null);
+        }
+
+        return new RippleDrawable(ColorStateList.valueOf(clickedBackground), original, new ColorDrawable(clickedBackground));
+    }
 
 
 
