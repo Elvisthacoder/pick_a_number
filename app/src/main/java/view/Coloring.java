@@ -677,6 +677,14 @@ public class Coloring {
      * @return The state list drawable (< API21) or a ripple drawable (>= API21) that is in contrast with the on-click background color
      */
 
+    public Drawable createContrastBackgroundDrawable(Context context, int normal, int clickedBackground, boolean shouldFade,
+                                                     Drawable original) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            return createContrastRippleDrawable(normal, clickedBackground, original);
+        } else {
+            return createContrastStateDrawable(context, normal, clickedBackground, shouldFade, original);
+        }
+    }
 
 
 
