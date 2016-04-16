@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Pick_a_number</string>
+    <string name="this_picker_will_work">This number picker will control the background.</string>
 </resources>
