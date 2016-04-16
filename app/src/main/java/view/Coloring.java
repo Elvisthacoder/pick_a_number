@@ -700,18 +700,30 @@ public class Coloring {
         int g = Color.green(color);
         int b = Color.blue(color);
 
+        // human eye is least sensitive to blue, then to red, then green; calculating:
+        int brightness = (b + r + r + g + g + g) / 6;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+        if (brightness < BRIGHTNESS_THRESHOLD)
+            return Color.WHITE;
+        else
+            return Color.BLACK;
     }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
