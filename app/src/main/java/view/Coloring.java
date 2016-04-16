@@ -598,6 +598,23 @@ public class Coloring {
             }
         }
 
+        // init state arrays
+        int[] selectedState = new int[] {
+                android.R.attr.state_selected
+        };
+        int[] pressedState = new int[] {
+                android.R.attr.state_pressed
+        };
+        int[] checkedState = new int[] {
+                android.R.attr.state_checked
+        };
+        int[] activatedState = new int[] {};
+        if (Build.VERSION.SDK_INT > Build.VERSION_CODES.GINGERBREAD_MR1) {
+            activatedState = new int[] {
+                    android.R.attr.state_activated
+            };
+        }
+
 
 
 
