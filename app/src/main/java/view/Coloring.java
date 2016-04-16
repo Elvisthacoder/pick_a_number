@@ -654,6 +654,8 @@ public class Coloring {
      * @return The Ripple drawable that is in contrast with the on-click background color
      */
 
+    @TargetApi(Build.VERSION_CODES.LOLLIPOP)
+
 
 
 
