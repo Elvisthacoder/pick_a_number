@@ -644,6 +644,16 @@ public class Coloring {
         return states;
     }
 
+    /**
+     * Very similar to {@link #createContrastStateDrawable(Context context, int, int, boolean, android.graphics.drawable.Drawable)} but
+     * creates a Ripple drawable available in Lollipop.
+     *
+     * @param normal Color normal state of the drawable to this color
+     * @param clickedBackground Background color of the View that will show when view is clicked
+     * @param original This drawable will be contrasted to the {@code clickedBackground} color on press
+     * @return The Ripple drawable that is in contrast with the on-click background color
+     */
+
 
 
 
