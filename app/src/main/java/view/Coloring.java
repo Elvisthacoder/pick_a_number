@@ -664,6 +664,21 @@ public class Coloring {
         return new RippleDrawable(ColorStateList.valueOf(clickedBackground), original, new ColorDrawable(clickedBackground));
     }
 
+    /**
+     * This basically chooses between {@link #createContrastStateDrawable(Context, int, int, boolean, android.graphics.drawable.Drawable)}
+     * and {@link #createContrastRippleDrawable(int, int, android.graphics.drawable.Drawable)} depending on the available API level.
+     *
+     * @param context Which context to use
+     * @param normal Color normal state of the drawable to this color
+     * @param clickedBackground Background color of the View that will show when view is clicked
+     * @param shouldFade Set to true if the state list (pre-API 21) should have a fading effect
+     * @param original This drawable will be contrasted to the {@code clickedBackground} color on press (pre-API 21) or used for masking in
+     *            ripples on post-API 21
+     * @return The state list drawable (< API21) or a ripple drawable (>= API21) that is in contrast with the on-click background color
+     */
+
+
+
 
 
 
