@@ -619,6 +619,14 @@ public class Coloring {
         Drawable clickedStateDrawable = colorDrawable(context, original, getContrastColor(clickedBackground));
         Drawable checkedStateDrawable = colorDrawable(context, original, getContrastColor(clickedBackground));
 
+        // prepare state list (order of adding states is important!)
+        StateListDrawable states = new StateListDrawable();
+        states.addState(pressedState, clickedStateDrawable);
+        if (!shouldFade) {
+            states.addState(selectedState, clickedStateDrawable);
+            states.addState(checkedState, checkedStateDrawable);
+        }
+
 
 
 
