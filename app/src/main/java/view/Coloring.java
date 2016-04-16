@@ -686,6 +686,15 @@ public class Coloring {
         }
     }
 
+    /**
+     * Calculates the contrasted color from the given one. If the color darkness is under<br>
+     * the {@link #BRIGHTNESS_THRESHOLD}, contrasted color is white. If the color darkness is<br>
+     * over the {@link #BRIGHTNESS_THRESHOLD}, contrasted color is black.
+     *
+     * @param color Calculating contrasted color to this one
+     * @return White or black, depending on the provided color's brightness
+     */
+
 
 
 
