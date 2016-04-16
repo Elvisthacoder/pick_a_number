@@ -615,6 +615,11 @@ public class Coloring {
             };
         }
 
+        Drawable normalStateDrawable = colorDrawable(context, original, normal);
+        Drawable clickedStateDrawable = colorDrawable(context, original, getContrastColor(clickedBackground));
+        Drawable checkedStateDrawable = colorDrawable(context, original, getContrastColor(clickedBackground));
+
+
 
 
 
